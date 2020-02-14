@@ -1,13 +1,13 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Technische Universität Hamburg
+-- Engineer: Shashwat S. Sanghavi
 -- 
 -- Create Date: 14.02.2020 11:13:22
 -- Design Name: 
 -- Module Name: SNG_tb - Behavioral
 -- Project Name: 
--- Target Devices: 
--- Tool Versions: 
+-- Target Devices: TE0820-3CG-1E
+-- Tool Versions: Vivado 2018.2
 -- Description: 
 -- 
 -- Dependencies: 
@@ -49,7 +49,7 @@ end component;
 signal clk_in : std_logic:='0';
 signal half_period : time := 5 ns;
 signal rstn_in : std_logic := '0';
-signal x_signal : std_logic_vector(7 downto 0):= b"01100110"; -- 0x66
+signal x_signal : std_logic_vector(7 downto 0):= x"E4"; -- 0x
 signal seed_in : std_logic_vector(7 downto 0):= x"63"; -- 01100011 -- Px= 4/8
 signal X_q : std_logic_vector(7 downto 0);
 signal random_number : std_logic_vector(7 downto 0);
