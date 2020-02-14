@@ -10,41 +10,56 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="828300000fs"></ZoomStartTime>
-      <ZoomEndTime time="898800001fs"></ZoomEndTime>
-      <Cursor1Time time="855000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1562000001fs"></ZoomEndTime>
+      <Cursor1Time time="140000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="166"></NameColumnWidth>
-      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+      <NameColumnWidth column_width="210"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
+   <wvobject fp_name="/SNG_tb/seed_in" type="array">
+      <obj_property name="ElementShortName">seed_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seed_in[7:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/SNG_tb/clk_in" type="logic">
       <obj_property name="ElementShortName">clk_in</obj_property>
       <obj_property name="ObjectShortName">clk_in</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/SNG_tb/rstn_in" type="logic">
       <obj_property name="ElementShortName">rstn_in</obj_property>
       <obj_property name="ObjectShortName">rstn_in</obj_property>
    </wvobject>
    <wvobject fp_name="/SNG_tb/x_signal" type="array">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">x_signal[7:0]</obj_property>
       <obj_property name="ObjectShortName">x_signal[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/SNG_tb/seed_in" type="array">
-      <obj_property name="ElementShortName">seed_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">seed_in[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/SNG_tb/X_q" type="array">
-      <obj_property name="ElementShortName">X_q[7:0]</obj_property>
-      <obj_property name="ObjectShortName">X_q[7:0]</obj_property>
+      <obj_property name="label">Binary Input x_signal[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/SNG_tb/random_number" type="array">
       <obj_property name="ElementShortName">random_number[7:0]</obj_property>
       <obj_property name="ObjectShortName">random_number[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/SNG_tb/X_q_bitwise" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">X_q_bitwise</obj_property>
       <obj_property name="ObjectShortName">X_q_bitwise</obj_property>
+      <obj_property name="label">OUTPUT STREAM X_q_bitwise</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SNG_tb/clk_counter" type="other">
+      <obj_property name="ElementShortName">clk_counter</obj_property>
+      <obj_property name="ObjectShortName">clk_counter</obj_property>
    </wvobject>
 </wave_config>

@@ -49,11 +49,12 @@ end component;
 signal clk_in : std_logic:='0';
 signal half_period : time := 5 ns;
 signal rstn_in : std_logic := '0';
-signal x_signal : std_logic_vector(7 downto 0):= x"E4"; -- 0x
+signal x_signal : std_logic_vector(7 downto 0):= x"64"; -- 100 decimal
 signal seed_in : std_logic_vector(7 downto 0):= x"63"; -- 01100011 -- Px= 4/8
 signal X_q : std_logic_vector(7 downto 0);
 signal random_number : std_logic_vector(7 downto 0);
 signal X_q_bitwise : std_logic;
+signal clk_counter : integer range 0 to 255:= 0;
 
 begin
 
@@ -72,6 +73,19 @@ begin
     
     
     wait;
+end process;
+
+
+process(clk_in)
+begin
+    if (rising_edge(clk_in))then
+        if(clk_counter<255)then
+            clk_counter<= clk_counter+1;
+        else
+            clk_counter<=0;
+        end if;
+    end if;
+
 end process;
 
 ---INSTANTIATION
