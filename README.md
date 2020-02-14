@@ -6,4 +6,4 @@ Number generator for stochastic representation of given input binary string.
  The final aim is to implement the VHDL description for a real-time hardware test.
  
  # Tools intended to use
- ATOM based text editor; C-compiler online (or using existing Xilinx SDK.. eclipse derivative)
+ vivado 2018.2 - Direct implementation in hardware for observing SN
