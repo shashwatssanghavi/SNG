@@ -1,0 +1,23 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  c:/intelfpga_lite/19.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/19.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  Stochastic_Number_Generator.vho
+Sim SDF file          :  Stochastic_Number_Generator__vhdl.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script c:/intelfpga_lite/19.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File Stochastic_Number_Generator_run_msim_gate_vhdl.do already exists - backing up current file as Stochastic_Number_Generator_run_msim_gate_vhdl.do.bak
+Info: Spawning ModelSim Simulation software 
+Info: NativeLink simulation flow was successful

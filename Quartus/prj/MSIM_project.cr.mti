@@ -1,0 +1,19 @@
+C:/Projektarbeit/SNG/Quartus/hdl/LFSR_8bit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Projektarbeit/SNG/Quartus/hdl/LFSR_8bit.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity LFSR_8bit
+-- Compiling architecture Behavioral of LFSR_8bit
+
+} {} {}} C:/Projektarbeit/SNG/Quartus/sim/SNG_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Projektarbeit/SNG/Quartus/sim/SNG_tb.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SNG_tb
+-- Compiling architecture Behavioral of SNG_tb
+** Warning: C:/Projektarbeit/SNG/Quartus/sim/SNG_tb.vhd(68): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}}

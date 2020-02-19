@@ -1,0 +1,635 @@
+-- Copyright (C) 2019  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+--sr_reg[0] is sr_reg[0]
+--register power-up is low
+
+sr_reg[0] = DFFEAS(bit_ones_counter[0], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[1] is sr_reg[1]
+--register power-up is low
+
+sr_reg[1] = DFFEAS(bit_ones_counter[1], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[2] is sr_reg[2]
+--register power-up is low
+
+sr_reg[2] = DFFEAS(bit_ones_counter[2], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[3] is sr_reg[3]
+--register power-up is low
+
+sr_reg[3] = DFFEAS(bit_ones_counter[3], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[4] is sr_reg[4]
+--register power-up is low
+
+sr_reg[4] = DFFEAS(bit_ones_counter[4], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[5] is sr_reg[5]
+--register power-up is low
+
+sr_reg[5] = DFFEAS(bit_ones_counter[5], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[6] is sr_reg[6]
+--register power-up is low
+
+sr_reg[6] = DFFEAS(bit_ones_counter[6], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--sr_reg[7] is sr_reg[7]
+--register power-up is low
+
+sr_reg[7] = DFFEAS(bit_ones_counter[7], clk_in,  ,  , A1L127,  ,  , !rstn_in,  );
+
+
+--bit_ones_counter[0] is bit_ones_counter[0]
+--register power-up is low
+
+bit_ones_counter[0] = DFFEAS(A1L2, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[1] is bit_ones_counter[1]
+--register power-up is low
+
+bit_ones_counter[1] = DFFEAS(A1L6, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[2] is bit_ones_counter[2]
+--register power-up is low
+
+bit_ones_counter[2] = DFFEAS(A1L10, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[3] is bit_ones_counter[3]
+--register power-up is low
+
+bit_ones_counter[3] = DFFEAS(A1L14, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[4] is bit_ones_counter[4]
+--register power-up is low
+
+bit_ones_counter[4] = DFFEAS(A1L18, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[5] is bit_ones_counter[5]
+--register power-up is low
+
+bit_ones_counter[5] = DFFEAS(A1L22, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[6] is bit_ones_counter[6]
+--register power-up is low
+
+bit_ones_counter[6] = DFFEAS(A1L26, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_ones_counter[7] is bit_ones_counter[7]
+--register power-up is low
+
+bit_ones_counter[7] = DFFEAS(A1L30, clk_in,  ,  , A1L82,  ,  , A1L127,  );
+
+
+--bit_counter[8] is bit_counter[8]
+--register power-up is low
+
+bit_counter[8] = DFFEAS(A1L34, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L2 is Add0~1
+A1L2_adder_eqn = ( bit_ones_counter[0] ) + ( VCC ) + ( !VCC );
+A1L2 = SUM(A1L2_adder_eqn);
+
+--A1L3 is Add0~2
+A1L3_adder_eqn = ( bit_ones_counter[0] ) + ( VCC ) + ( !VCC );
+A1L3 = CARRY(A1L3_adder_eqn);
+
+
+--A1L6 is Add0~5
+A1L6_adder_eqn = ( bit_ones_counter[1] ) + ( GND ) + ( A1L3 );
+A1L6 = SUM(A1L6_adder_eqn);
+
+--A1L7 is Add0~6
+A1L7_adder_eqn = ( bit_ones_counter[1] ) + ( GND ) + ( A1L3 );
+A1L7 = CARRY(A1L7_adder_eqn);
+
+
+--A1L10 is Add0~9
+A1L10_adder_eqn = ( bit_ones_counter[2] ) + ( GND ) + ( A1L7 );
+A1L10 = SUM(A1L10_adder_eqn);
+
+--A1L11 is Add0~10
+A1L11_adder_eqn = ( bit_ones_counter[2] ) + ( GND ) + ( A1L7 );
+A1L11 = CARRY(A1L11_adder_eqn);
+
+
+--A1L14 is Add0~13
+A1L14_adder_eqn = ( bit_ones_counter[3] ) + ( GND ) + ( A1L11 );
+A1L14 = SUM(A1L14_adder_eqn);
+
+--A1L15 is Add0~14
+A1L15_adder_eqn = ( bit_ones_counter[3] ) + ( GND ) + ( A1L11 );
+A1L15 = CARRY(A1L15_adder_eqn);
+
+
+--A1L18 is Add0~17
+A1L18_adder_eqn = ( bit_ones_counter[4] ) + ( GND ) + ( A1L15 );
+A1L18 = SUM(A1L18_adder_eqn);
+
+--A1L19 is Add0~18
+A1L19_adder_eqn = ( bit_ones_counter[4] ) + ( GND ) + ( A1L15 );
+A1L19 = CARRY(A1L19_adder_eqn);
+
+
+--A1L22 is Add0~21
+A1L22_adder_eqn = ( bit_ones_counter[5] ) + ( GND ) + ( A1L19 );
+A1L22 = SUM(A1L22_adder_eqn);
+
+--A1L23 is Add0~22
+A1L23_adder_eqn = ( bit_ones_counter[5] ) + ( GND ) + ( A1L19 );
+A1L23 = CARRY(A1L23_adder_eqn);
+
+
+--A1L26 is Add0~25
+A1L26_adder_eqn = ( bit_ones_counter[6] ) + ( GND ) + ( A1L23 );
+A1L26 = SUM(A1L26_adder_eqn);
+
+--A1L27 is Add0~26
+A1L27_adder_eqn = ( bit_ones_counter[6] ) + ( GND ) + ( A1L23 );
+A1L27 = CARRY(A1L27_adder_eqn);
+
+
+--A1L30 is Add0~29
+A1L30_adder_eqn = ( bit_ones_counter[7] ) + ( GND ) + ( A1L27 );
+A1L30 = SUM(A1L30_adder_eqn);
+
+
+--A1L34 is Add1~1
+A1L34_adder_eqn = ( bit_counter[8] ) + ( GND ) + ( A1L39 );
+A1L34 = SUM(A1L34_adder_eqn);
+
+
+--A1L38 is Add1~5
+A1L38_adder_eqn = ( bit_counter[7] ) + ( GND ) + ( A1L43 );
+A1L38 = SUM(A1L38_adder_eqn);
+
+--A1L39 is Add1~6
+A1L39_adder_eqn = ( bit_counter[7] ) + ( GND ) + ( A1L43 );
+A1L39 = CARRY(A1L39_adder_eqn);
+
+
+--bit_counter[7] is bit_counter[7]
+--register power-up is low
+
+bit_counter[7] = DFFEAS(A1L38, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L42 is Add1~9
+A1L42_adder_eqn = ( bit_counter[6] ) + ( GND ) + ( A1L47 );
+A1L42 = SUM(A1L42_adder_eqn);
+
+--A1L43 is Add1~10
+A1L43_adder_eqn = ( bit_counter[6] ) + ( GND ) + ( A1L47 );
+A1L43 = CARRY(A1L43_adder_eqn);
+
+
+--bit_counter[6] is bit_counter[6]
+--register power-up is low
+
+bit_counter[6] = DFFEAS(A1L42, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L46 is Add1~13
+A1L46_adder_eqn = ( bit_counter[5] ) + ( GND ) + ( A1L51 );
+A1L46 = SUM(A1L46_adder_eqn);
+
+--A1L47 is Add1~14
+A1L47_adder_eqn = ( bit_counter[5] ) + ( GND ) + ( A1L51 );
+A1L47 = CARRY(A1L47_adder_eqn);
+
+
+--bit_counter[5] is bit_counter[5]
+--register power-up is low
+
+bit_counter[5] = DFFEAS(A1L46, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L50 is Add1~17
+A1L50_adder_eqn = ( bit_counter[4] ) + ( GND ) + ( A1L55 );
+A1L50 = SUM(A1L50_adder_eqn);
+
+--A1L51 is Add1~18
+A1L51_adder_eqn = ( bit_counter[4] ) + ( GND ) + ( A1L55 );
+A1L51 = CARRY(A1L51_adder_eqn);
+
+
+--bit_counter[4] is bit_counter[4]
+--register power-up is low
+
+bit_counter[4] = DFFEAS(A1L50, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L54 is Add1~21
+A1L54_adder_eqn = ( bit_counter[3] ) + ( GND ) + ( A1L59 );
+A1L54 = SUM(A1L54_adder_eqn);
+
+--A1L55 is Add1~22
+A1L55_adder_eqn = ( bit_counter[3] ) + ( GND ) + ( A1L59 );
+A1L55 = CARRY(A1L55_adder_eqn);
+
+
+--bit_counter[3] is bit_counter[3]
+--register power-up is low
+
+bit_counter[3] = DFFEAS(A1L54, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L58 is Add1~25
+A1L58_adder_eqn = ( bit_counter[2] ) + ( GND ) + ( A1L63 );
+A1L58 = SUM(A1L58_adder_eqn);
+
+--A1L59 is Add1~26
+A1L59_adder_eqn = ( bit_counter[2] ) + ( GND ) + ( A1L63 );
+A1L59 = CARRY(A1L59_adder_eqn);
+
+
+--bit_counter[2] is bit_counter[2]
+--register power-up is low
+
+bit_counter[2] = DFFEAS(A1L58, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L62 is Add1~29
+A1L62_adder_eqn = ( bit_counter[1] ) + ( GND ) + ( A1L67 );
+A1L62 = SUM(A1L62_adder_eqn);
+
+--A1L63 is Add1~30
+A1L63_adder_eqn = ( bit_counter[1] ) + ( GND ) + ( A1L67 );
+A1L63 = CARRY(A1L63_adder_eqn);
+
+
+--bit_counter[1] is bit_counter[1]
+--register power-up is low
+
+bit_counter[1] = DFFEAS(A1L62, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--A1L66 is Add1~33
+A1L66_adder_eqn = ( bit_counter[0] ) + ( VCC ) + ( !VCC );
+A1L66 = SUM(A1L66_adder_eqn);
+
+--A1L67 is Add1~34
+A1L67_adder_eqn = ( bit_counter[0] ) + ( VCC ) + ( !VCC );
+A1L67 = CARRY(A1L67_adder_eqn);
+
+
+--bit_counter[0] is bit_counter[0]
+--register power-up is low
+
+bit_counter[0] = DFFEAS(A1L66, clk_in,  ,  ,  ,  ,  , A1L127,  );
+
+
+--random_number[0] is random_number[0]
+random_number[0] = OUTPUT(B1_lfsr_register[1]);
+
+
+--random_number[1] is random_number[1]
+random_number[1] = OUTPUT(B1_lfsr_register[2]);
+
+
+--random_number[2] is random_number[2]
+random_number[2] = OUTPUT(B1_lfsr_register[3]);
+
+
+--random_number[3] is random_number[3]
+random_number[3] = OUTPUT(B1_lfsr_register[4]);
+
+
+--random_number[4] is random_number[4]
+random_number[4] = OUTPUT(B1_lfsr_register[5]);
+
+
+--random_number[5] is random_number[5]
+random_number[5] = OUTPUT(B1_lfsr_register[6]);
+
+
+--random_number[6] is random_number[6]
+random_number[6] = OUTPUT(B1_lfsr_register[7]);
+
+
+--random_number[7] is random_number[7]
+random_number[7] = OUTPUT(B1_lfsr_register[8]);
+
+
+--X_q_bitwise is X_q_bitwise
+X_q_bitwise = OUTPUT(x_bit_signal);
+
+
+--X_q[0] is X_q[0]
+X_q[0] = OUTPUT(sr_reg[0]);
+
+
+--X_q[1] is X_q[1]
+X_q[1] = OUTPUT(sr_reg[1]);
+
+
+--X_q[2] is X_q[2]
+X_q[2] = OUTPUT(sr_reg[2]);
+
+
+--X_q[3] is X_q[3]
+X_q[3] = OUTPUT(sr_reg[3]);
+
+
+--X_q[4] is X_q[4]
+X_q[4] = OUTPUT(sr_reg[4]);
+
+
+--X_q[5] is X_q[5]
+X_q[5] = OUTPUT(sr_reg[5]);
+
+
+--X_q[6] is X_q[6]
+X_q[6] = OUTPUT(sr_reg[6]);
+
+
+--X_q[7] is X_q[7]
+X_q[7] = OUTPUT(sr_reg[7]);
+
+
+--probability_out[0] is probability_out[0]
+probability_out[0] = OUTPUT(bit_ones_counter[0]);
+
+
+--probability_out[1] is probability_out[1]
+probability_out[1] = OUTPUT(bit_ones_counter[1]);
+
+
+--probability_out[2] is probability_out[2]
+probability_out[2] = OUTPUT(bit_ones_counter[2]);
+
+
+--probability_out[3] is probability_out[3]
+probability_out[3] = OUTPUT(bit_ones_counter[3]);
+
+
+--probability_out[4] is probability_out[4]
+probability_out[4] = OUTPUT(bit_ones_counter[4]);
+
+
+--probability_out[5] is probability_out[5]
+probability_out[5] = OUTPUT(bit_ones_counter[5]);
+
+
+--probability_out[6] is probability_out[6]
+probability_out[6] = OUTPUT(bit_ones_counter[6]);
+
+
+--probability_out[7] is probability_out[7]
+probability_out[7] = OUTPUT(bit_ones_counter[7]);
+
+
+--B1_lfsr_register[1] is LFSR_8bit:lfsr_inst|lfsr_register[1]
+--register power-up is low
+
+B1_lfsr_register[1] = DFFEAS(B1L15, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[2] is LFSR_8bit:lfsr_inst|lfsr_register[2]
+--register power-up is low
+
+B1_lfsr_register[2] = DFFEAS(B1L16, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[3] is LFSR_8bit:lfsr_inst|lfsr_register[3]
+--register power-up is low
+
+B1_lfsr_register[3] = DFFEAS(B1L18, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[4] is LFSR_8bit:lfsr_inst|lfsr_register[4]
+--register power-up is low
+
+B1_lfsr_register[4] = DFFEAS(B1L19, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[5] is LFSR_8bit:lfsr_inst|lfsr_register[5]
+--register power-up is low
+
+B1_lfsr_register[5] = DFFEAS(B1L20, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[6] is LFSR_8bit:lfsr_inst|lfsr_register[6]
+--register power-up is low
+
+B1_lfsr_register[6] = DFFEAS(B1L22, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[7] is LFSR_8bit:lfsr_inst|lfsr_register[7]
+--register power-up is low
+
+B1_lfsr_register[7] = DFFEAS(B1L23, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_lfsr_register[8] is LFSR_8bit:lfsr_inst|lfsr_register[8]
+--register power-up is low
+
+B1_lfsr_register[8] = DFFEAS(B1L25, clk_in,  ,  ,  ,  ,  ,  ,  );
+
+
+--x_bit_signal is x_bit_signal
+--register power-up is low
+
+x_bit_signal = DFFEAS(A1L96, clk_in,  ,  , rstn_in,  ,  ,  ,  );
+
+
+--seed_in[4] is seed_in[4]
+seed_in[4] = INPUT();
+
+
+--rstn_in is rstn_in
+rstn_in = INPUT();
+
+
+--B1L9 is LFSR_8bit:lfsr_inst|lfsr_register[7]~0
+B1L9 = ( !B1_lfsr_register[5] & ( rstn_in & ( (!B1_lfsr_register[1] & (!B1_lfsr_register[2] & (!B1_lfsr_register[3] & !B1_lfsr_register[4]))) ) ) );
+
+
+--B1L10 is LFSR_8bit:lfsr_inst|lfsr_register[7]~1
+B1L10 = (!B1_lfsr_register[6] & (!B1_lfsr_register[7] & !B1_lfsr_register[8]));
+
+
+--seed_in[0] is seed_in[0]
+seed_in[0] = INPUT();
+
+
+--seed_in[1] is seed_in[1]
+seed_in[1] = INPUT();
+
+
+--seed_in[2] is seed_in[2]
+seed_in[2] = INPUT();
+
+
+--seed_in[3] is seed_in[3]
+seed_in[3] = INPUT();
+
+
+--B1L11 is LFSR_8bit:lfsr_inst|lfsr_register[7]~2
+B1L11 = ( !seed_in[3] & ( (!rstn_in & (!seed_in[0] & (!seed_in[1] & !seed_in[2]))) ) );
+
+
+--seed_in[5] is seed_in[5]
+seed_in[5] = INPUT();
+
+
+--seed_in[6] is seed_in[6]
+seed_in[6] = INPUT();
+
+
+--seed_in[7] is seed_in[7]
+seed_in[7] = INPUT();
+
+
+--B1L12 is LFSR_8bit:lfsr_inst|lfsr_register[7]~3
+B1L12 = (!seed_in[5] & (!seed_in[6] & !seed_in[7]));
+
+
+--B1L14 is LFSR_8bit:lfsr_inst|lfsr_register~4
+B1L14 = ( rstn_in & ( seed_in[0] & ( !B1_lfsr_register[3] $ (!B1_lfsr_register[4] $ (!B1_lfsr_register[6] $ (!B1_lfsr_register[8]))) ) ) ) # ( !rstn_in & ( seed_in[0] ) ) # ( rstn_in & ( !seed_in[0] & ( !B1_lfsr_register[3] $ (!B1_lfsr_register[4] $ (!B1_lfsr_register[6] $ (!B1_lfsr_register[8]))) ) ) );
+
+
+--B1L15 is LFSR_8bit:lfsr_inst|lfsr_register~5
+B1L15 = ( B1L12 & ( B1L14 & ( (!seed_in[4] & (!B1L11 & ((!B1L9) # (!B1L10)))) # (seed_in[4] & ((!B1L9) # ((!B1L10)))) ) ) ) # ( !B1L12 & ( B1L14 & ( (!B1L9) # (!B1L10) ) ) );
+
+
+--clk_in is clk_in
+clk_in = INPUT();
+
+
+--B1L16 is LFSR_8bit:lfsr_inst|lfsr_register~6
+B1L16 = (!rstn_in & ((seed_in[1]))) # (rstn_in & (B1_lfsr_register[1]));
+
+
+--B1L17 is LFSR_8bit:lfsr_inst|lfsr_register~7
+B1L17 = (!rstn_in & ((seed_in[2]))) # (rstn_in & (B1_lfsr_register[2]));
+
+
+--B1L18 is LFSR_8bit:lfsr_inst|lfsr_register~8
+B1L18 = ( B1L12 & ( B1L17 ) ) # ( !B1L12 & ( B1L17 ) ) # ( B1L12 & ( !B1L17 & ( (!seed_in[4] & (((B1L9 & B1L10)) # (B1L11))) # (seed_in[4] & (B1L9 & (B1L10))) ) ) ) # ( !B1L12 & ( !B1L17 & ( (B1L9 & B1L10) ) ) );
+
+
+--B1L19 is LFSR_8bit:lfsr_inst|lfsr_register~9
+B1L19 = (!rstn_in & ((seed_in[3]))) # (rstn_in & (B1_lfsr_register[3]));
+
+
+--B1L20 is LFSR_8bit:lfsr_inst|lfsr_register~10
+B1L20 = (!rstn_in & ((seed_in[4]))) # (rstn_in & (B1_lfsr_register[4]));
+
+
+--B1L21 is LFSR_8bit:lfsr_inst|lfsr_register~11
+B1L21 = (!rstn_in & ((seed_in[5]))) # (rstn_in & (B1_lfsr_register[5]));
+
+
+--B1L22 is LFSR_8bit:lfsr_inst|lfsr_register~12
+B1L22 = ( B1L12 & ( B1L21 ) ) # ( !B1L12 & ( B1L21 ) ) # ( B1L12 & ( !B1L21 & ( (!seed_in[4] & (((B1L9 & B1L10)) # (B1L11))) # (seed_in[4] & (B1L9 & (B1L10))) ) ) ) # ( !B1L12 & ( !B1L21 & ( (B1L9 & B1L10) ) ) );
+
+
+--B1L23 is LFSR_8bit:lfsr_inst|lfsr_register~13
+B1L23 = (!rstn_in & ((seed_in[6]))) # (rstn_in & (B1_lfsr_register[6]));
+
+
+--B1L24 is LFSR_8bit:lfsr_inst|lfsr_register~14
+B1L24 = (!rstn_in & ((seed_in[7]))) # (rstn_in & (B1_lfsr_register[7]));
+
+
+--B1L25 is LFSR_8bit:lfsr_inst|lfsr_register~15
+B1L25 = ( B1L12 & ( B1L24 ) ) # ( !B1L12 & ( B1L24 ) ) # ( B1L12 & ( !B1L24 & ( (!seed_in[4] & (((B1L9 & B1L10)) # (B1L11))) # (seed_in[4] & (B1L9 & (B1L10))) ) ) ) # ( !B1L12 & ( !B1L24 & ( (B1L9 & B1L10) ) ) );
+
+
+--x[3] is x[3]
+x[3] = INPUT();
+
+
+--x[2] is x[2]
+x[2] = INPUT();
+
+
+--x[1] is x[1]
+x[1] = INPUT();
+
+
+--x[0] is x[0]
+x[0] = INPUT();
+
+
+--A1L90 is LessThan0~0
+A1L90 = (!B1_lfsr_register[2] & (B1_lfsr_register[1] & (!x[1] & !x[0]))) # (B1_lfsr_register[2] & ((!x[1]) # ((B1_lfsr_register[1] & !x[0]))));
+
+
+--A1L91 is LessThan0~1
+A1L91 = ( A1L90 & ( (!B1_lfsr_register[4] & (!x[3] & ((!x[2]) # (B1_lfsr_register[3])))) # (B1_lfsr_register[4] & (((!x[3]) # (!x[2])) # (B1_lfsr_register[3]))) ) ) # ( !A1L90 & ( (!B1_lfsr_register[4] & (B1_lfsr_register[3] & (!x[3] & !x[2]))) # (B1_lfsr_register[4] & ((!x[3]) # ((B1_lfsr_register[3] & !x[2])))) ) );
+
+
+--x[4] is x[4]
+x[4] = INPUT();
+
+
+--x[7] is x[7]
+x[7] = INPUT();
+
+
+--x[6] is x[6]
+x[6] = INPUT();
+
+
+--x[5] is x[5]
+x[5] = INPUT();
+
+
+--A1L92 is LessThan0~2
+A1L92 = ( x[6] & ( x[5] & ( (B1_lfsr_register[6] & (B1_lfsr_register[7] & (!B1_lfsr_register[8] $ (x[7])))) ) ) ) # ( !x[6] & ( x[5] & ( (B1_lfsr_register[6] & (!B1_lfsr_register[7] & (!B1_lfsr_register[8] $ (x[7])))) ) ) ) # ( x[6] & ( !x[5] & ( (!B1_lfsr_register[6] & (B1_lfsr_register[7] & (!B1_lfsr_register[8] $ (x[7])))) ) ) ) # ( !x[6] & ( !x[5] & ( (!B1_lfsr_register[6] & (!B1_lfsr_register[7] & (!B1_lfsr_register[8] $ (x[7])))) ) ) );
+
+
+--A1L93 is LessThan0~3
+A1L93 = (A1L92 & (!B1_lfsr_register[5] $ (x[4])));
+
+
+--A1L94 is LessThan0~4
+A1L94 = ( x[6] & ( x[5] & ( (B1_lfsr_register[8] & !x[7]) ) ) ) # ( !x[6] & ( x[5] & ( (!B1_lfsr_register[7] & (B1_lfsr_register[8] & !x[7])) # (B1_lfsr_register[7] & ((!x[7]) # (B1_lfsr_register[8]))) ) ) ) # ( x[6] & ( !x[5] & ( (!B1_lfsr_register[8] & (B1_lfsr_register[6] & (B1_lfsr_register[7] & !x[7]))) # (B1_lfsr_register[8] & ((!x[7]) # ((B1_lfsr_register[6] & B1_lfsr_register[7])))) ) ) ) # ( !x[6] & ( !x[5] & ( (!B1_lfsr_register[8] & (!x[7] & ((B1_lfsr_register[7]) # (B1_lfsr_register[6])))) # (B1_lfsr_register[8] & (((!x[7]) # (B1_lfsr_register[7])) # (B1_lfsr_register[6]))) ) ) );
+
+
+--A1L95 is LessThan0~5
+A1L95 = (!A1L94 & ((!B1_lfsr_register[5]) # ((!A1L92) # (x[4]))));
+
+
+--A1L96 is LessThan0~6
+A1L96 = (!A1L95) # ((A1L91 & A1L93));
+
+
+--A1L127 is sr_reg[0]~0
+A1L127 = (!rstn_in) # (bit_counter[8]);
+
+
+--A1L82 is bit_ones_counter[1]~0
+A1L82 = ( A1L95 & ( (!rstn_in) # (((A1L91 & A1L93)) # (bit_counter[8])) ) ) # ( !A1L95 );
+
+

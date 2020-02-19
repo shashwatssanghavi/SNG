@@ -1,0 +1,181 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "random_number[0]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[1]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[2]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[3]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[4]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[5]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[6]",
+					"strict" : false
+				},
+				{
+					"name" : "random_number[7]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q_bitwise",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[0]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[1]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[2]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[3]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[4]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[5]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[6]",
+					"strict" : false
+				},
+				{
+					"name" : "X_q[7]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "probability_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rstn_in",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seed_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_in",
+					"strict" : false
+				},
+				{
+					"name" : "x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projektarbeit/SNG/Quartus/prj/simulation/modelsim
+Esng
+Z1 w1582108610
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ]5>FeXdO_VokjbTg3XO4a1
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 TB5]Z`3iO9=dGB2S44`V_2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 KU>Dj=3XKalf:AZJVRI7i2
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 keKdzDF]h;<bR7>BAU=ob0
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 K@kdQkfndC=[E?lM[YRN=1
+R0
+Z11 8Stochastic_Number_Generator.vho
+Z12 FStochastic_Number_Generator.vho
+l0
+L39
+VE^b;jQN@QHk=@RfU@;YOJ3
+!s100 cT`Fe]PPXJQ7DG0?jJ?l51
+Z13 OP;C;10.4a;61
+31
+Z14 !s110 1582109529
+!i10b 1
+Z15 !s108 1582109529.000000
+Z16 !s90 -reportprogress|300|-93|-work|work|Stochastic_Number_Generator.vho|
+Z17 !s107 Stochastic_Number_Generator.vho|
+!i113 1
+Z18 o-93 -work work -O0
+Z19 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 3 sng 0 22 E^b;jQN@QHk=@RfU@;YOJ3
+l235
+L98
+Vim4e48@Pb9KRT^@iLOZ6V1
+!s100 f?S=SQY0n66kPVHiA67XZ3
+R13
+31
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Esng_tb
+Z20 w1581688715
+R8
+R9
+R0
+Z21 8C:/Projektarbeit/SNG/Quartus/prj/../sim/SNG_tb.vhd
+Z22 FC:/Projektarbeit/SNG/Quartus/prj/../sim/SNG_tb.vhd
+l0
+L34
+V=ValTYX;bJS[O9MbDlbj13
+!s100 ajFf6WALJHzTB2kjY5>6C0
+R13
+31
+R14
+!i10b 1
+R15
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Projektarbeit/SNG/Quartus/prj/../sim/SNG_tb.vhd|
+Z24 !s107 C:/Projektarbeit/SNG/Quartus/prj/../sim/SNG_tb.vhd|
+!i113 1
+R18
+R19
+Abehavioral
+R8
+R9
+DEx4 work 6 sng_tb 0 22 =ValTYX;bJS[O9MbDlbj13
+l59
+L38
+ViV]6gPTegki2==@=`?F0>0
+!s100 aG2`Z>OGQ<@:5DT0[QcEl1
+R13
+31
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 1
+R18
+R19
