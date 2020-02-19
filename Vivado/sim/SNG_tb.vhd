@@ -39,22 +39,25 @@ architecture Behavioral of SNG_tb is
 component SNG is
     Port ( clk_in : in STD_LOGIC;
            rstn_in : in STD_LOGIC;
+           en_n_in : in STD_LOGIC;
            seed_in : in STD_LOGIC_VECTOR(7 downto 0);
            x : in STD_LOGIC_VECTOR (7 downto 0);
            random_number : out STD_LOGIC_VECTOR (7 downto 0); -- leave unused as we directly instantiate submodule for the time-being
-           X_q : out STD_LOGIC_VECTOR (7 downto 0);
+           prob_equi_out : out STD_LOGIC_VECTOR(7 downto 0);
            X_q_bitwise : out STD_LOGIC);
 end component;
 
 signal clk_in : std_logic:='0';
 signal half_period : time := 5 ns;
 signal rstn_in : std_logic := '0';
-signal x_signal : std_logic_vector(7 downto 0):= x"64"; -- 100 decimal
+signal x : std_logic_vector(7 downto 0):= x"64"; -- 100 decimal
 signal seed_in : std_logic_vector(7 downto 0):= x"63"; -- 01100011 -- Px= 4/8
 signal X_q : std_logic_vector(7 downto 0);
 signal random_number : std_logic_vector(7 downto 0);
 signal X_q_bitwise : std_logic;
 signal clk_counter : integer range 0 to 255:= 0;
+signal en_n_in : std_logic;
+signal prob_equi_out : std_logic_vector(7 downto 0);
 
 begin
 
@@ -63,14 +66,15 @@ clk_in <= not clk_in after half_period;
 process
 begin
     rstn_in <= '1';
+    en_n_in <= '1';
     wait for 10ns;
     
+    en_n_in <= '1';
     rstn_in <='0';
     wait for 10 ns;
     
     rstn_in <='1';
-    
-    
+    en_n_in <= '0';
     
     wait;
 end process;
@@ -94,8 +98,9 @@ port map(
         clk_in => clk_in,
         rstn_in => rstn_in,
         seed_in => seed_in,
-        x => x_signal,
+        en_n_in => en_n_in,
+        x => x,
         random_number => random_number,
-        X_q => X_q,
+        prob_equi_out => prob_equi_out,
         X_q_bitwise => X_q_bitwise);
 end Behavioral;

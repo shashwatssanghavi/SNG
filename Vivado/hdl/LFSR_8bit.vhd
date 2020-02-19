@@ -35,9 +35,8 @@ entity LFSR_8bit is
     Port ( clk_in : in STD_LOGIC;
            rstn_in : in STD_LOGIC;
            seed_in : in STD_LOGIC_VECTOR (7 downto 0);
-           pn_out : out STD_LOGIC;
-           random_vector : out STD_LOGIC_VECTOR(7 downto 0);
-           ready : out STD_LOGIC);
+           random_vector : out STD_LOGIC_VECTOR(7 downto 0)
+           );
 end LFSR_8bit;
 
 architecture Behavioral of LFSR_8bit is
@@ -56,7 +55,6 @@ begin
                 end if;
             else
                 if(lfsr_register/=x"00")then
-                    pn_out <= lfsr_register(8);
                     lfsr_register(8) <= lfsr_register(7);
                     lfsr_register(7) <= lfsr_register(6);
                     lfsr_register(6) <= lfsr_register(5);
